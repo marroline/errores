@@ -1,0 +1,4 @@
+errores
+=======
+
+try         {         System.out.println("Tratando de ralizar la conexión...");         System.out.print("Lo cual fue..............");         Class.forName("com.mysql.jdbc.Driver");         Connection con = DriverManager.getConnection("jdbc:mysql://localhost/cls","root","");         Statement estado= con.createStatement();         estado.executeUpdate("INSERT INTO cls.orden VALUES"+ "?"+txtmarca.getText()+"?"+txtmodelo.getText()+"?"+txtserie.getText());                      System.out.println("	Realizada con éxito");         }                  catch(SQLException ex)         {                          System.out.println("Erróneamente su conexión");         }                  catch(ClassNotFoundException e)         {            e.printStackTrace();         }                  catch(Exception e)         {             System.out.println("Hay un Error en" + e.getMessage());         }
